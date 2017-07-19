@@ -1,0 +1,87 @@
+"""復習""""
+#指定した位置に四角を描く#
+important turtle
+t =turtle Turtle()
+
+def rect(x,y,a):
+ t.up()
+ t.home()
+ t.forward(x)
+ t.left(90)
+ t.forward(y)
+ t.down()
+ for i in range(4):
+  t.forward(a)
+  t.left(-90)
+
+t.clear()
+rect(10,20,100)
+
+
+"""問168"""
+#六面体のさいころを振る#
+#オブジェクトの雛形をクラスと呼ぶ#
+
+class Dice:　　　#勝手に名前を決めてよい
+ face_num = 6
+ def shoot(self):
+  return random.randint(1, self.face_num)
+
+#face_num がアトリビュート，shoot がメソッドである。
+（メソッドの最初の引数はself とすることになっている。）
+このさいころの実体（インスタンス）を作り，さいころを振ってみよう。
+
+import random
+aDice = Dice()  #クラスをもとにオブジェクトを作る
+aDice.shoot()　#オブジェクトを使う
+
+"""おまけ"""
+#面の数を変える#
+aDice.face_num=1000
+aDice.shoota()
+
+"""問169"""
+#最初から面の数をかえたい#
+class Dice:
+ bdef __init__(self, val):
+  self.face_num = val
+ def shoot(self):
+  return random.randint(1, self.face_num)
+
+important randamu
+aDice = Dice(12)
+aDice.shoot()
+
+"""問170"""
+#ダイスのクラス図をかけ#
+------------
+|  Dice    |  #クラス名
+------------
+|face_num  |  #性質(アトリビュート)
+------------
+|shot      |  #機能(メソッド)
+------------
+
+"""問171"""
+新しいデータ型の定義は，（class）キーワードで始めます。
+"""問172"""
+メソッドを追加する場合は，1 つ目の引数に必ず（self）を指定します。
+"""問173"""
+初期化メソッドの実体は，（__init__）という名前のメソッドです。
+
+"""問179"""
+#Python インタラクティブシェルを起動してみましょう#
+pythonと入力
+
+"""問180"""
+
+
+"""問181"""
+シェルのようなキーボードで操作するインターフェースを，（CUI）と呼びます
+
+"""問182"""
+dir #今いる場所のファイル一覧をみれる
+dir>files.txt #これでかきこめる
+#「＞」リダイレクトという#
+
+
